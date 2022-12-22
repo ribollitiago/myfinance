@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SorteioApp</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="registrar">Registre-se</string>
+</resources>
