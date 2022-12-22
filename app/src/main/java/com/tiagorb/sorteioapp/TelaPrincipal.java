@@ -12,6 +12,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ public class TelaPrincipal extends AppCompatActivity {
 
     private ImageView rightIcon;
     private Dialog mDialog;
+    private AppCompatButton btSair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,6 @@ public class TelaPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_tela_principal);
 
         IniciarComponentes();
-
 
         rightIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,5 +44,6 @@ public class TelaPrincipal extends AppCompatActivity {
         rightIcon = findViewById(R.id.right_icon);
         TextView title = findViewById(R.id.title_bar);
         mDialog = new Dialog(this);
+        btSair = findViewById(R.id.bt_sair);
     }
 }

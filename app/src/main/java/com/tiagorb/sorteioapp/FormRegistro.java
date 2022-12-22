@@ -39,6 +39,7 @@ public class FormRegistro extends AppCompatActivity {
                     if(checkUser==false) {
                         if (checkEmail == false) {
                             Boolean insert = DB.insertData(nome, email, senha);
+                            DB.close();
                             if (insert == true) {
                                 Toast.makeText(FormRegistro.this, "Registro concluído", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), TelaPrincipal.class);
