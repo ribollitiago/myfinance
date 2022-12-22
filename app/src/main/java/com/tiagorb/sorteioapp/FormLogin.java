@@ -38,7 +38,7 @@ public class FormLogin extends AppCompatActivity {
                 String email = editEmail.getText().toString();
                 String senha = editSenha.getText().toString();
 
-                if(email.equals("")||senha.equals(""))
+                if(email.isEmpty()||senha.isEmpty())
                     Toast.makeText(FormLogin.this, "Por favor preencha tudo", Toast.LENGTH_SHORT).show();
                 else{
                     Boolean checkEmailSenha = DB.checkEmailPassword(email,senha);

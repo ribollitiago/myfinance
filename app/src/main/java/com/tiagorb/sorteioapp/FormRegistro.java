@@ -30,13 +30,13 @@ public class FormRegistro extends AppCompatActivity {
                 String email = editEmail.getText().toString();
                 String senha = editSenha.getText().toString();
 
-                if(nome.equals("")||email.equals("")||senha.equals("")){
+                if(nome.isEmpty() || email.isEmpty() || senha.isEmpty()){
                     Toast.makeText(FormRegistro.this, "Por favor preencha tudo", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Boolean checkUser = DB.checkUserName(nome);
                     Boolean checkEmail = DB.checkEmail(email);
-                    if(checkUser==false) {
+                    if(checkUser == false) {
                         if (checkEmail == false) {
                             Boolean insert = DB.insertData(nome, email, senha);
                             DB.close();

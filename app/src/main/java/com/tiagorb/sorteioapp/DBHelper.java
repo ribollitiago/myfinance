@@ -5,8 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import androidx.annotation.Nullable;
+import android.widget.ListView;
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -26,6 +25,11 @@ public class DBHelper extends SQLiteOpenHelper {
         MyDB.execSQL("drop Table if exists pessoas");
     }
 
+    public void listDados(){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        Cursor cursor = MyDB.rawQuery("SELECT nome FROM pessoas", null);
+    }
+
     public Boolean insertData(String nome, String email, String senha){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -40,6 +44,47 @@ public class DBHelper extends SQLiteOpenHelper {
             return false;
         else
             return true;
+    }
+    public Boolean updateData(String nome, String email, String senha){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("nome", nome);
+        contentValues.put("email", email);
+        Cursor cursor = MyDB.rawQuery("Select * from pessoas where senha = ?", new String[]{senha});
+
+        if(cursor.getCount()>0) {
+            long result = MyDB.update("pessoas", contentValues, "senha=?", new String[]{senha});
+
+            if (result == -1)
+                return false;
+            else
+                return true;
+        }else
+            return false;
+    }
+
+    public Boolean deleteData(String nome){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+
+        Cursor cursor = MyDB.rawQuery("Select * from pessoas where nome = ?", new String[]{nome});
+
+        if(cursor.getCount()>0) {
+            long result = MyDB.delete("pessoas", "senha=?", new String[]{nome});
+
+            if (result == -1)
+                return false;
+            else
+                return true;
+        }else
+            return false;
+    }
+
+    public Cursor getData(){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        Cursor cursor = MyDB.rawQuery("Select * from pessoas", null);
+        return cursor;
+
     }
 
     public Boolean checkUserName(String nome){
@@ -61,7 +106,6 @@ public class DBHelper extends SQLiteOpenHelper {
         else
             return false;
     }
-
 
     public Boolean checkEmailPassword(String email, String senha){
         SQLiteDatabase MyDB = this.getWritableDatabase();

@@ -22,7 +22,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="27dp"
         android:layout_toEndOf="@+id/popup_account"
-        android:text="dasdadadasd"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="15sp"
         />
@@ -45,7 +45,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="71dp"
         android:layout_toEndOf="@+id/popup_email"
-        android:text="dasdadadasd@gmail.com"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="15sp"
         />
@@ -55,6 +55,17 @@
         style="@style/Button_Log_Out"
         android:text="Sair"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/ic_close"
+        android:src="@drawable/ic_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
         />
 
 </RelativeLayout>
