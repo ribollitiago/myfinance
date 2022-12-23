@@ -1,22 +1,21 @@
-package com.tiagorb.sorteioapp;
+package com.tiagorb.sorteioapp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.tiagorb.sorteioapp.R;
+import com.tiagorb.sorteioapp.database.DBHelper;
 
 public class TelaPrincipal extends AppCompatActivity {
 

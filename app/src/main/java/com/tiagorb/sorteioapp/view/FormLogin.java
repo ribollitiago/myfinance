@@ -1,4 +1,4 @@
-package com.tiagorb.sorteioapp;
+package com.tiagorb.sorteioapp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.tiagorb.sorteioapp.R;
+import com.tiagorb.sorteioapp.database.DBHelper;
 
 public class FormLogin extends AppCompatActivity {
 
