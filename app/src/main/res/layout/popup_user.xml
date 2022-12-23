@@ -4,6 +4,7 @@
     android:layout_width="371dp"
     android:layout_height="200dp"
     android:layout_gravity="center"
+    android:padding="20dp"
     android:background="@drawable/popup_background">
 
     <ImageView
@@ -11,18 +12,16 @@
         android:src="@drawable/ic_account_circle"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
         />
 
     <TextView
         android:id="@+id/user_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="27dp"
         android:layout_toEndOf="@+id/popup_account"
-        android:text=""
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5.5dp"
+        android:text="aaaaaaaaaaa"
         android:textColor="@color/black"
         android:textSize="15sp"
         />
@@ -32,9 +31,7 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_below="@+id/popup_account"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
         android:src="@drawable/ic_email"
         />
 
@@ -43,9 +40,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="71dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/user_account"
         android:layout_toEndOf="@+id/popup_email"
-        android:text=""
+        android:text="aaaaaaaaa"
         android:textColor="@color/black"
         android:textSize="15sp"
         />
@@ -53,19 +51,16 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_sair"
         style="@style/Button_Log_Out"
-        android:text="Sair"
+        android:text="@string/logOut"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
         />
 
     <ImageView
         android:id="@+id/ic_close"
-        android:src="@drawable/ic_close"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
-        android:layout_margin="20dp"
-        />
+        android:src="@drawable/ic_close" />
 
 </RelativeLayout>

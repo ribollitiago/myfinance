@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -50,8 +51,6 @@ public class TelaPrincipal extends AppCompatActivity {
     private void IniciarComponentes(){
         mDialog = new Dialog(this);
         icRight = findViewById(R.id.right_icon);
-        btSair = findViewById(R.id.bt_sair);
-        icClose = findViewById(R.id.ic_close);
         txtUser = findViewById(R.id.user_account);
         txtUser2 = findViewById(R.id.user_accounttest);
         txtEmail = findViewById(R.id.user_email);
@@ -64,6 +63,26 @@ public class TelaPrincipal extends AppCompatActivity {
             public void onClick(View view) {
                 mDialog.setContentView(R.layout.popup_user);
                 mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+                icClose = (ImageView) mDialog.findViewById(R.id.ic_close);
+                btSair = (AppCompatButton) mDialog.findViewById(R.id.bt_sair);
+
+                icClose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        mDialog.dismiss();
+                    }
+                });
+
+                btSair.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(TelaPrincipal.this, "Deslogado com sucesso!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), FormLogin.class);
+                        startActivity(intent);
+                    }
+                });
+
                 mDialog.show();
             }
         });
