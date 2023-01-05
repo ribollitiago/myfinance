@@ -1,4 +1,4 @@
-package com.tiagorb.sorteioapp;
+package com.tiagorb.myfinance;
 
 import android.content.Context;
 

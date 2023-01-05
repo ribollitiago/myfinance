@@ -1,4 +1,4 @@
-package com.tiagorb.sorteioapp.database;
+package com.tiagorb.myfinance.database;
 
 import android.content.ContentValues;
 import android.content.Context;

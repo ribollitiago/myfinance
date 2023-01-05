@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.FormRegistro">
+    tools:context="com.tiagorb.myfinance.view.FormRegistro">
 
     <TextView
         android:id="@+id/title_registro"

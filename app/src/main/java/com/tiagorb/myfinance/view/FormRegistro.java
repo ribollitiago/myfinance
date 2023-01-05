@@ -1,4 +1,4 @@
-package com.tiagorb.sorteioapp.view;
+package com.tiagorb.myfinance.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tiagorb.sorteioapp.R;
-import com.tiagorb.sorteioapp.database.DBHelper;
+import com.tiagorb.myfinance.database.DBHelper;
+import com.tiagorb.myfinance.R;
 
 public class FormRegistro extends AppCompatActivity {
 

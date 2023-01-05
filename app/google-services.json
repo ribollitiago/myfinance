@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "554362760267",
+    "project_id": "my-finance-663ac",
+    "storage_bucket": "my-finance-663ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554362760267:android:a3624850de4545d1cfb1ce",
+        "android_client_info": {
+          "package_name": "com.tiagorb.myfinance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554362760267-vgbji58qhs431ig6vhg69s952cedr5h2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2-D_prQmYyabTaAGP5Vqb8ajgH3LClXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554362760267-vgbji58qhs431ig6vhg69s952cedr5h2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.tiagorb.sorteioapp.view;
+package com.tiagorb.myfinance.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -14,8 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tiagorb.sorteioapp.R;
-import com.tiagorb.sorteioapp.database.DBHelper;
+import com.tiagorb.myfinance.R;
+import com.tiagorb.myfinance.database.DBHelper;
 
 public class TelaPrincipal extends AppCompatActivity {
 
